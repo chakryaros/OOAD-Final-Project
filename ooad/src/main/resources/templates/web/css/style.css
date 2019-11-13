@@ -1,0 +1,165 @@
+
+body, html {
+          height: 100%;
+          margin: 0;
+        }
+
+.bg {
+  /* The image used */
+  background-image: url(../images/background.png);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tm-header{
+    background: black;
+    display: block;
+    padding: 20px;
+    
+}
+
+.tm-logo{
+    align-content: center;
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+}
+
+.tm-nav{
+   max-width: 90%;
+       border: 2px solid #3a382e;
+    display: block;
+  
+    margin: 30px auto 5px auto;
+  
+}
+
+.tm-nav div
+{
+    display: table;
+    padding: 10px;
+    margin: 0px auto;
+}
+
+.tm-nav  div ul li{
+    display:inline-block;  
+   
+} 
+
+/* for table in header */
+.tm-nav div ul li a{
+    font-size: 1.8vmax;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+    line-height: 50px;
+}
+
+
+/*container for search */
+.Search-container {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  z-index: 2;
+  position: fixed;
+  left: 0.5px;
+  right: 0.5px;
+  width: 350px;
+  background-color: grey;
+  opacity: 0.85;
+  font-family: Impact;
+  border-radius: 5px;
+}
+
+
+
+.image {
+  background: url(../images/background.png);
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+
+
+.tm-nav li a:hover {
+  background-color:  #ff9980;
+
+}
+
+
+.tm-nav li a.active {
+  background-color: #ff5c33;
+  color: black;
+}
+
+/*header ends here and sections start*/
+
+/* place */
+
+
+.tm-place:focus {
+    outline: none;
+}
+.tm-place a:focus {
+    outline: none;
+}
+
+.tm-place{
+    display: block;
+    background: #353535;
+    max-width: 33.33%;
+    width: 33.33%;
+}
+
+
+.tm-place img{
+    max-width: 100%;
+    width: 100%;
+}
+
+
+
+.tm-place p{
+    font-size: 1.5vw;
+    color: #fff;
+    text-align: center;
+padding: 5%;
+
+  
+}
+
+.tm-place a{
+    text-decoration: none;
+}
+
+.tm-place a p:hover{
+    color: #ec3c6a;
+
+
+}
+
+
+.s{
+    padding-bottom: 1%;
+}
+
+.flex{
+    display: flex;
+}
