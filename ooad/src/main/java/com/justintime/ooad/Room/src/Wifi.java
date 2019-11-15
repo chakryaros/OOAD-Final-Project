@@ -1,4 +1,4 @@
-package com.justintime.ooad.Room.src;
+package com.justintime.ooad.room.src;
 
 public class Wifi extends RoomDecorator {
 	Room room;
@@ -8,7 +8,7 @@ public class Wifi extends RoomDecorator {
 	}
 	
 	public String showRoom() {
-		return room.showRoom() + "with Wifi";
+		return room.showRoom() + ", Wifi";
 	}
 	
 	public double getPrice() {

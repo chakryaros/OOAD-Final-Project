@@ -11,9 +11,9 @@ public class EconomicClass extends Flight{
 
     @Override
     public double getPrice() {
-        ArrayList<Integer> prices = new ArrayList<>();
-        prices.add(200);
-        prices.add(300);
+        ArrayList<Double> prices = new ArrayList<>();
+        prices.add((double)239.99);
+        prices.add((double)339.99);
 
         Random rand = new Random();
         return prices.get(rand.nextInt(prices.size()));

@@ -16,7 +16,7 @@ public class ExtraSpace extends FlightDecorator{
 
     @Override
     public double getPrice() {
-        return flight.getPrice() + 50;
+        return flight.getPrice() + 49.99;
     }
     
 }

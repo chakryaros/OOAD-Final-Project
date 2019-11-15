@@ -15,7 +15,7 @@ public class Wifi extends FlightDecorator{
 
     @Override
     public double getPrice() {
-        return flight.getPrice() + 30;
+        return flight.getPrice() + 15.99;
     }
     
 }

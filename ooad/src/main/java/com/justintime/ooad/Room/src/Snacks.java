@@ -1,4 +1,4 @@
-package com.justintime.ooad.Room.src;
+package com.justintime.ooad.room.src;
 
 public class Snacks extends RoomDecorator {
 	Room room;
@@ -8,11 +8,11 @@ public class Snacks extends RoomDecorator {
 	}
 	
 	public String showRoom() {
-		return room.showRoom() + "with stocked mini-fridge";
+		return room.showRoom() + ", Stocked Mini-Fridge";
 	}
 	
 	public double getPrice() {
-		return room.getPrice() + 5.99;
+		return room.getPrice() + 20;
 	}
 
 }

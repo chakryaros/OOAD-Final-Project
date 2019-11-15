@@ -16,7 +16,7 @@ public class ExtraMeal extends FlightDecorator{
 
     @Override
     public double getPrice() {
-        return flight.getPrice() + 10;
+        return flight.getPrice() + 11.50;
     }
     
 }

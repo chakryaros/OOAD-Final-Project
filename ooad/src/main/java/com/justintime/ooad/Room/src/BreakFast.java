@@ -1,4 +1,4 @@
-package com.justintime.ooad.Room.src;
+package com.justintime.ooad.room.src;
 
 public class BreakFast extends RoomDecorator {
 	Room room;
@@ -8,7 +8,7 @@ public class BreakFast extends RoomDecorator {
 	}
 	
 	public String showRoom() {
-		return room.showRoom() + " with Breakfast";
+		return room.showRoom() + ", Breakfast";
 	}
 	
 	public double getPrice() {

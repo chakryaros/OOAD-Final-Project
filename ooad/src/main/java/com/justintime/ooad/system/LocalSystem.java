@@ -3,7 +3,7 @@ package com.justintime.ooad.system;
 import java.util.ArrayList;
 import java.util.Observable;
 
-import com.justintime.ooad.Room.src.Room;
+import com.justintime.ooad.room.src.Room;
 import com.justintime.ooad.flight.Flight;
 
 public class LocalSystem extends Observable {
@@ -45,7 +45,7 @@ public class LocalSystem extends Observable {
         }
     }
 
-    public void setReservationState(String state)){
+    public void setReservationState(String state){
         this.reservationState = state;
         setChanged();
         notifyObservers();

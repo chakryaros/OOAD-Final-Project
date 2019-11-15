@@ -1,34 +1,18 @@
-package com.justintime.ooad.Room.src;
+package com.justintime.ooad.room.src;
 
 public abstract class Room {
-	protected String name;
 	protected double price;
-	protected int bedNum;
-	protected String roomDescription;
+	protected String description;
 	
-	// Explicit Constructor
-	public Room(String name, double price, String bedNum) {
-		this.price = price;
-		this.roomDescription = name + bedNum;
-	}
-	
-	// Default Constructor
 	public Room() {
 		this.price = 0;
-		this.roomDescription = "None";
+		this.description = "Unknown Room";
 	}
 	
 	public String showRoom() {
-		return roomDescription;
+		return description;
 	}
-	
-	/*public String getName() {
-		return this.name;
-	}*/
 	
 	public abstract double getPrice();
 	
-	/*public int getBedNum() {
-		return this.bedNum;
-	}*/
 }

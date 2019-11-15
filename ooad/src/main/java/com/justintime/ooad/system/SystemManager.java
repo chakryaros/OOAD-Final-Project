@@ -13,7 +13,7 @@ public class SystemManager implements Observer{
     @Override
     public void update(Observable o, Object arg) {
         if(o == ov){
-            System.out.println(ov.getReservationState())
+            System.out.println(ov.getReservationState());
         }
     }
 }

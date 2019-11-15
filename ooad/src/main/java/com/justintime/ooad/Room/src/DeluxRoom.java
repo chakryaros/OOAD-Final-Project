@@ -1,23 +1,31 @@
-package com.justintime.ooad.Room.src;
+package com.justintime.ooad.room.src;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class DeluxRoom extends Room {
 
-	public DeluxRoom(final String name, final double price, final String bedNum) {
-		super(name, price, bedNum);
+	public DeluxRoom(final String descrip) {
+		ArrayList<String> types = new ArrayList<String>();
+		types.add("1 King Bed");
+		types.add("2 Queen Bed");
+		types.add("2 Queen Bed 1 Sofa Bed");
+
+		Random rand = new Random();
+		description = descrip + ", " + types.get(rand.nextInt(types.size()));
 	}
 	
-	// These may be superfluous
 	public double getPrice() {
-		return super.price;
+		if(description.contains("King")){
+			return (double)120;
+		}
+		else if(description.contains("Sofa")){
+			return (double)135;
+		}
+		else{
+			return (double)130;
+		}
+		
 	}
 	
-	/*
-	public String getName() {
-		return super.name;
-	}
-		
-	public int getBedNum() {
-		return super.bedNum;
-	}
-	*/
 }

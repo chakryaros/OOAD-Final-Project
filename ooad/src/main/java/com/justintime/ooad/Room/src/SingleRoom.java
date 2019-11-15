@@ -1,23 +1,12 @@
-package com.justintime.ooad.Room.src;
+package com.justintime.ooad.room.src;
 
 public class SingleRoom extends Room {
 
-	public SingleRoom(String name, double price, String bedNum) {
-		super(name, price, bedNum);
+	public SingleRoom(String descrip) {
+		description = descrip + ", 1 Twin Bed";
 	}
 	
-	// These may be superfluous
 	public double getPrice() {
-		return super.price;
+        return (double)100;
 	}
-	
-	/*
-	public String getName() {
-		return super.name;
-	}
-	
-	public int getBedNum() {
-		return super.bedNum;
-	}
-	*/
 }
