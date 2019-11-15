@@ -1,3 +1,4 @@
+package com.justintime.ooad.Room.src;
 
 public abstract class Room {
 	protected String name;

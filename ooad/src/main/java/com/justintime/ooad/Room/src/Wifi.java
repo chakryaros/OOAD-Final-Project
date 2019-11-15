@@ -1,3 +1,4 @@
+package com.justintime.ooad.Room.src;
 
 public class Wifi extends RoomDecorator {
 	Room room;
