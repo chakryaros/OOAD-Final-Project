@@ -1,4 +1,4 @@
-package com.justintime.ooad.Flight;
+package com.justintime.ooad.flight;
 
 public abstract class Flight {
     double price = 0;

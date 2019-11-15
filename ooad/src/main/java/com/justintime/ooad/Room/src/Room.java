@@ -7,7 +7,7 @@ public abstract class Room {
 	protected String roomDescription;
 	
 	// Explicit Constructor
-	public Room(String name, double price, int bedNum) {
+	public Room(String name, double price, String bedNum) {
 		this.price = price;
 		this.roomDescription = name + bedNum;
 	}

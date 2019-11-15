@@ -1,11 +1,11 @@
-package com.justintime.ooad.Flight;
+package com.justintime.ooad.flight;
 
 
 public class ExtraMeal extends FlightDecorator{
 
     Flight flight;
 
-    ExtraMeal(Flight flight){
+    public ExtraMeal(Flight flight){
         this.flight = flight;
     }
 

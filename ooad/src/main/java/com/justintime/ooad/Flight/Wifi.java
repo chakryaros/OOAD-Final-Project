@@ -1,10 +1,10 @@
-package com.justintime.ooad.Flight;
+package com.justintime.ooad.flight;
 
 public class Wifi extends FlightDecorator{
 
     Flight flight;
 
-    Wifi(Flight flight){
+    public Wifi(Flight flight){
         this.flight = flight;
     }
 

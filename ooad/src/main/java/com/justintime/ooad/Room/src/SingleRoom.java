@@ -2,7 +2,7 @@ package com.justintime.ooad.Room.src;
 
 public class SingleRoom extends Room {
 
-	public SingleRoom(String name, double price, int bedNum) {
+	public SingleRoom(String name, double price, String bedNum) {
 		super(name, price, bedNum);
 	}
 	

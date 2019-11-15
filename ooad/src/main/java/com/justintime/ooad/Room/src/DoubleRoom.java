@@ -2,7 +2,7 @@ package com.justintime.ooad.Room.src;
 
 public class DoubleRoom extends Room {
 
-	public DoubleRoom(String name, double price, int bedNum) {
+	public DoubleRoom(String name, double price, String bedNum) {
 		super(name, price, bedNum);	// Invoke superclass constructor
 	}
 	

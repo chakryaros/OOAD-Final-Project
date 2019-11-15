@@ -1,11 +1,11 @@
-package com.justintime.ooad.Flight;
+package com.justintime.ooad.flight;
 import java.util.ArrayList; 
 import java.util.Random;
 
 
 public class EconomicClass extends Flight{
 
-    EconomicClass(String descrip) {
+    public EconomicClass(String descrip) {
         description = descrip + ", Economy Class";
     }
 

@@ -1,11 +1,11 @@
-package com.justintime.ooad.Flight;
+package com.justintime.ooad.flight;
 
 
 public class SeatSelection extends FlightDecorator{
 
     Flight flight;
 
-    SeatSelection(Flight flight){
+    public SeatSelection(Flight flight){
         this.flight = flight;
     }
 

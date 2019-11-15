@@ -1,10 +1,10 @@
-package com.justintime.ooad.Flight;
+package com.justintime.ooad.flight;
 import java.util.ArrayList; 
 import java.util.Random;
 
 public class FirstClass extends Flight{
 
-    FirstClass(String descrip) {
+    public FirstClass(String descrip) {
         description = descrip + ", First Class";
     }
 
