@@ -6,6 +6,7 @@ import java.util.Observable;
 public class SystemManager implements Observer{
 
     private LocalSystem ov = null;
+    
     public SystemManager(LocalSystem ov){
         this.ov = ov;
     }
