@@ -1,4 +1,4 @@
-package com.justintime.ooad.customer;
+package com.justintime.ooad.order;
 
 public class FlightOrder{
     public String description;

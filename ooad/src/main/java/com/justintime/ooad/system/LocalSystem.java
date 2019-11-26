@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 import com.justintime.ooad.room.src.Room;
-import com.justintime.ooad.customer.Customer;
+import com.justintime.ooad.customer.customer;
 import com.justintime.ooad.flight.Flight;
 
 public class LocalSystem extends Observable {
     
     private ArrayList<Flight> flights = new ArrayList<Flight>();
     private ArrayList<Room> rooms = new ArrayList<Room>();
-    private ArrayList<Customer> customers = new ArrayList<Customer>();
+    private ArrayList<customer> customers = new ArrayList<customer>();
     private String reservationState;
 
 
-    public LocalSystem(ArrayList<Flight> flights, ArrayList<Room> rooms, ArrayList<Customer> customers, Customer customer){
+    public LocalSystem(ArrayList<Flight> flights, ArrayList<Room> rooms, ArrayList<customer> customers, customer customer){
         this.flights = flights;
         this.rooms = rooms;
         this.customers = customers;
@@ -75,6 +75,16 @@ public class LocalSystem extends Observable {
 
     public String getReservationState(){
         return reservationState;
+    }
+
+    public void getCustomers(){
+        for(int i = 0; i < customers.size(); i++){
+            System.out.println(customers.get(i).getName() + customers.get(i).getType());
+        }
+    }
+
+    public void addCsutomers(customer c){
+        customers.add(c);
     }
 
 }

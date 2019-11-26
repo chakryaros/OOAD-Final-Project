@@ -1,8 +1,11 @@
 package com.justintime.ooad.customer;
-import java.util.ArrayList; 
+
+import java.util.ArrayList;
+import com.justintime.ooad.order.FlightOrder;
+import com.justintime.ooad.order.HotelOrder;
 import com.justintime.ooad.system.LocalSystem;
 
-public class Customer {
+public class customer {
     public String name;
     public String email;
     public String type;
@@ -10,7 +13,7 @@ public class Customer {
     protected ArrayList<HotelOrder> hotelReservation = new ArrayList<HotelOrder>();
     protected ArrayList<FlightOrder> flightReservation = new ArrayList<FlightOrder>();
 
-    public Customer(String name, String email, String type, LocalSystem sys){
+    public customer(String name, String email, String type, LocalSystem sys){
         this.name = name;
         this.email = email;
         this.type = type;
@@ -18,11 +21,11 @@ public class Customer {
     }
 
     public String getName(){
-        return this.name;
+        return name;
     }
 
     public String getEmail(){
-        return this.email;
+        return email;
     }
 
     public void addHotelReservation(HotelOrder h){
@@ -35,6 +38,10 @@ public class Customer {
         flightReservation.add(f);
         system.setReservationState(f.description);
         system.removeFlight(f.description);
+    }
+
+    public String getType(){
+        return type;
     }
 
     protected ArrayList<HotelOrder> getHotelReservation(){
