@@ -4,17 +4,21 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 import com.justintime.ooad.room.src.Room;
+import com.justintime.ooad.customer.Customer;
 import com.justintime.ooad.flight.Flight;
 
 public class LocalSystem extends Observable {
     
     private ArrayList<Flight> flights = new ArrayList<Flight>();
     private ArrayList<Room> rooms = new ArrayList<Room>();
+    private ArrayList<Customer> customers = new ArrayList<Customer>();
     private String reservationState;
 
-    public LocalSystem(ArrayList<Flight> flights, ArrayList<Room> rooms){
+
+    public LocalSystem(ArrayList<Flight> flights, ArrayList<Room> rooms, ArrayList<Customer> customers, Customer customer){
         this.flights = flights;
         this.rooms = rooms;
+        this.customers = customers;
         this.reservationState = "Unknown Reservation";
     }
 
@@ -41,6 +45,24 @@ public class LocalSystem extends Observable {
         for(int i = 0; i < rooms.size(); i++){
             if(rooms.get(i).showRoom().contains(RoomName) && rooms.get(i).showRoom().contains(bedNum)){
                 System.out.println(rooms.get(i).showRoom());
+            }
+        }
+    }
+
+    public void removeRoom(String descrip){
+        for(int i = 0; i < rooms.size(); i++){
+            if(rooms.get(i).showRoom() == descrip){
+                rooms.remove(i);
+                break;
+            }
+        }
+    }
+
+    public void removeFlight(String descrip){
+        for(int i = 0; i < flights.size(); i++){
+            if(flights.get(i).showFlight() == descrip){
+                flights.remove(i);
+                break;
             }
         }
     }
