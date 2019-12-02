@@ -3,7 +3,6 @@
 We create web application in Java using Spring Boot. The purpose of this project to allow users to book the ticket airpline and hotel of their choose.
 
 Team Name : 
-			
 			Chakrya Ros
 
             Xinyu Cao
