@@ -4,13 +4,13 @@ We create web application in Java using Spring Boot. The purpose of this project
 
 Team Name : 
 		
-			Chakrya Ros
+		Chakrya Ros
 
-            Xinyu Cao
+		Xinyu Cao
 
-            Warren Payne
+		Warren Payne
 
-            Christian Simons
+		Christian Simons
 
 How to run this project
 
