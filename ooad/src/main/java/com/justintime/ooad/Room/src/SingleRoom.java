@@ -3,7 +3,7 @@ package com.justintime.ooad.room.src;
 public class SingleRoom extends Room {
 
 	public SingleRoom(String descrip) {
-		description = descrip + ", 1 Twin Bed";
+		description = descrip;
 	}
 	
 	public double getPrice() {

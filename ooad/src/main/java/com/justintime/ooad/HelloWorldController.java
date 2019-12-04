@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
  
 @Controller
 public class HelloWorldController {
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     
-    @ResponseBody
+    @ResponseBody 
     public String helloWorld() {
-        return "hello java";
+        return "index";
     }
 }
