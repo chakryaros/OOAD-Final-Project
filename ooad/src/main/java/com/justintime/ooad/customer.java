@@ -1,9 +1,6 @@
-package com.justintime.ooad.customer;
+package com.justintime.ooad;
 
 import java.util.ArrayList;
-import com.justintime.ooad.order.FlightOrder;
-import com.justintime.ooad.order.HotelOrder;
-import com.justintime.ooad.system.LocalSystem;
 
 public class customer {
     public String name;

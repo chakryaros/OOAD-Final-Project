@@ -1,10 +1,10 @@
-package com.justintime.ooad.order;
+package com.justintime.ooad;
 
-public class FlightOrder{
+public class HotelOrder{
     public String description;
     public double payment;
 
-    public FlightOrder(String descrip, double payment){
+    public HotelOrder(String descrip, double payment){
         this.description = descrip;
         this.payment = payment;
     }

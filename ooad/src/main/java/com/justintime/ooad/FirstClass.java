@@ -1,4 +1,4 @@
-package com.justintime.ooad.flight;
+package com.justintime.ooad;
 import java.util.ArrayList; 
 import java.util.Random;
 

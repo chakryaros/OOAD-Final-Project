@@ -1,9 +1,9 @@
-package com.justintime.ooad.room.src;
+package com.justintime.ooad;
 
-public class Wifi extends RoomDecorator {
+public class RoomWifi extends RoomDecorator {
 	Room room;
 	
-	public Wifi(Room room) {
+	public RoomWifi(Room room) {
 		this.room = room;
 	}
 	

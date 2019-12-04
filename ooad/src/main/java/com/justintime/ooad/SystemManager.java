@@ -1,4 +1,4 @@
-package com.justintime.ooad.system;
+package com.justintime.ooad;
 
 import java.util.Observer;
 import java.util.Observable;

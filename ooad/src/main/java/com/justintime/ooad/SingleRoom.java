@@ -1,4 +1,4 @@
-package com.justintime.ooad.room.src;
+package com.justintime.ooad;
 
 public class SingleRoom extends Room {
 
