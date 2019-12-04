@@ -12,6 +12,7 @@ public class LocalSystem extends Observable {
     private ArrayList<Flight> flights = new ArrayList<Flight>();
     private ArrayList<Room> rooms = new ArrayList<Room>();
     private ArrayList<customer> customers = new ArrayList<customer>();
+    private customer current_customer;
     private String reservationState;
 
 
@@ -83,8 +84,17 @@ public class LocalSystem extends Observable {
         }
     }
 
-    public void addCsutomers(customer c){
+    public void addCustomers(customer c){
         customers.add(c);
+        current_customer = c;
+    }
+
+    public void setCustomer(String name, String email){
+        for(int i = 0; i < customers.size(); i++){
+            if (customers.get(i).getName() == name && customers.get(i).getEmail() == email){
+                current_customer = customers.get(i);
+            }
+        }
     }
 
 }
