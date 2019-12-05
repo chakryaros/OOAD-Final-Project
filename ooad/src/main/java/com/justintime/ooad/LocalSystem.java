@@ -3,15 +3,19 @@ package com.justintime.ooad;
 import java.util.ArrayList;
 import java.util.Observable;
 
+import com.justintime.ooad.decorator.components.Flight;
+import com.justintime.ooad.decorator.components.Rooms;
+import com.justintime.ooad.entites.Customer;
+
 public class LocalSystem extends Observable {
     
     private ArrayList<Flight> flights = new ArrayList<Flight>();
-    private ArrayList<Room> rooms = new ArrayList<Room>();
-    private ArrayList<customer> customers = new ArrayList<customer>();
-    public customer current_customer;
+    private ArrayList<Rooms> rooms = new ArrayList<Rooms>();
+    private ArrayList<Customer> customers = new ArrayList<Customer>();
+    public Customer current_customer;
     private String reservationState;
 
-    public LocalSystem(ArrayList<Flight> flights, ArrayList<Room> rooms, ArrayList<customer> customers) {
+    public LocalSystem(ArrayList<Flight> flights, ArrayList<Rooms> rooms, ArrayList<Customer> customers) {
         this.flights = flights;
         this.rooms = rooms;
         this.customers = customers;
@@ -23,7 +27,7 @@ public class LocalSystem extends Observable {
         System.out.println("A Flight is Added To The System.");
     }
 
-    public void addRoom(Room r) {
+    public void addRoom(Rooms r) {
         rooms.add(r);
         System.out.println("A Room is Added To The System.");
     }
@@ -80,7 +84,7 @@ public class LocalSystem extends Observable {
         }
     }
 
-    public customer getCustomer(String name, String email) {
+    public Customer getCustomer(String name, String email) {
         for (int i = 0; i < customers.size(); i++) {
            if(customers.get(i).getName() == name && customers.get(i).getEmail() == email){
                return customers.get(i);
@@ -89,20 +93,20 @@ public class LocalSystem extends Observable {
         return null;
     }
 
-    public void addCustomer(customer c, LocalSystem s) {
-        customers.add(c);
+    // public void addCustomer(Customer c, LocalSystem s) {
+    //     customers.add(c);
+    //     this.current_customer = c;
+    //     setSystem(s);
+    // }
+
+    public void setCustomer(Customer c) {
         this.current_customer = c;
-        setSystem(s);
     }
 
-    public void setCustomer(customer c) {
-        this.current_customer = c;
-    }
-
-    public void setSystem(LocalSystem s){
-        for(int i = 0; i < customers.size(); i++) {
-            customers.get(i).system = s;
-        }
-    }
+    // public void setSystem(LocalSystem s){
+    //     for(int i = 0; i < customers.size(); i++) {
+    //         customers.get(i).system = s;
+    //     }
+    // }
 
 }
