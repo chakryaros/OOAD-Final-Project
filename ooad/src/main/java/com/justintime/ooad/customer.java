@@ -7,14 +7,12 @@ public class customer {
     public String email;
     public String type;
     protected LocalSystem system;
-    protected ArrayList<HotelOrder> hotelReservation = new ArrayList<HotelOrder>();
-    protected ArrayList<FlightOrder> flightReservation = new ArrayList<FlightOrder>();
+    protected ArrayList<Room> hotelReservation = new ArrayList<>();
+    protected ArrayList<Flight> flightReservation = new ArrayList<>();
 
-    public customer(String name, String email, String type, LocalSystem sys){
+    public customer(String name, String email){
         this.name = name;
         this.email = email;
-        this.type = type;
-        this.system = sys;
     }
 
     public String getName(){
@@ -25,27 +23,29 @@ public class customer {
         return email;
     }
 
-    public void addHotelReservation(HotelOrder h){
+    public void addHotelReservation(Room h){
         hotelReservation.add(h);
-        system.setReservationState(h.description);
-        system.removeRoom(h.description);
+        system.setReservationState(h.showRoom());
+        system.removeRoom(h.showRoom());
     }
 
-    public void addFlightReservation(FlightOrder f){
+    public void addFlightReservation(Flight f){
         flightReservation.add(f);
-        system.setReservationState(f.description);
-        system.removeFlight(f.description);
+        system.setReservationState(f.showFlight());
+        system.removeFlight(f.showFlight());
     }
 
-    public String getType(){
-        return type;
+    protected void getHotelReservation(){
+        for(int i = 0; i < hotelReservation.size(); i++)
+        {
+            System.out.println(hotelReservation.get(i).showRoom() + " $" + hotelReservation.get(i).getPrice());
+        }
     }
 
-    protected ArrayList<HotelOrder> getHotelReservation(){
-        return hotelReservation;
-    }
-
-    protected ArrayList<FlightOrder> getFlightReservation(){
-        return flightReservation;
+    protected void getFlightReservation(){
+        for(int i = 0; i < flightReservation.size(); i++)
+        {
+            System.out.println(flightReservation.get(i).showFlight() + " $" + flightReservation.get(i).getPrice());
+        }
     }
 }

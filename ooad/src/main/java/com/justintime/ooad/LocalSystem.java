@@ -11,8 +11,7 @@ public class LocalSystem extends Observable {
     public customer current_customer;
     private String reservationState;
 
-    public LocalSystem(ArrayList<Flight> flights, ArrayList<Room> rooms, ArrayList<customer> customers,
-            customer customer) {
+    public LocalSystem(ArrayList<Flight> flights, ArrayList<Room> rooms, ArrayList<customer> customers) {
         this.flights = flights;
         this.rooms = rooms;
         this.customers = customers;
@@ -29,18 +28,19 @@ public class LocalSystem extends Observable {
         System.out.println("A Room is Added To The System.");
     }
 
-    public void searchFlight(String dep, String des) {
-        String trip = dep + " -> " + des;
+    public void searchFlight(String dep, String des, String dep_time, String return_time) {
+        String for_trip = dep + "-" + des + " " + dep_time;
+        String back_trip = des + "-" + dep + " " + return_time;
         for (int i = 0; i < flights.size(); i++) {
-            if (flights.get(i).showFlight().contains(trip)) {
+            if (flights.get(i).showFlight().contains(for_trip) || flights.get(i).showFlight().contains(back_trip)) {
                 System.out.println(flights.get(i).showFlight());
             }
         }
     }
 
-    public void searchRoom(String RoomName, String bedNum) {
+    public void searchRoom(String Location, String Type) {
         for (int i = 0; i < rooms.size(); i++) {
-            if (rooms.get(i).showRoom().contains(RoomName) && rooms.get(i).showRoom().contains(bedNum)) {
+            if (rooms.get(i).showRoom().contains(Location) && rooms.get(i).showRoom().contains(Type)) {
                 System.out.println(rooms.get(i).showRoom());
             }
         }
@@ -76,20 +76,32 @@ public class LocalSystem extends Observable {
 
     public void getCustomers() {
         for (int i = 0; i < customers.size(); i++) {
-            System.out.println(customers.get(i).getName() + customers.get(i).getType());
+            System.out.println(customers.get(i).getName() + " " + customers.get(i).getEmail());
         }
     }
 
-    public void addCustomers(customer c) {
+    public customer getCustomer(String name, String email) {
+        for (int i = 0; i < customers.size(); i++) {
+           if(customers.get(i).getName() == name && customers.get(i).getEmail() == email){
+               return customers.get(i);
+           }
+        }
+        return null;
+    }
+
+    public void addCustomer(customer c, LocalSystem s) {
         customers.add(c);
+        this.current_customer = c;
+        setSystem(s);
+    }
+
+    public void setCustomer(customer c) {
         this.current_customer = c;
     }
 
-    public void setCustomer(String name, String email) {
-        for (int i = 0; i < customers.size(); i++) {
-            if (customers.get(i).getName() == name && customers.get(i).getEmail() == email) {
-                this.current_customer = customers.get(i);
-            }
+    public void setSystem(LocalSystem s){
+        for(int i = 0; i < customers.size(); i++) {
+            customers.get(i).system = s;
         }
     }
 
